@@ -15,9 +15,8 @@
 
     <style>
         :root {
-            /* Vanilla & Cream Luxury Palette */
-            --silk-ivory: #F9F5EB; /* Warm Vanilla Base */
-            --pearl-cream: #FFFBF2; /* Soft Cream */
+            --silk-ivory: #F9F5EB;
+            --pearl-cream: #FFFBF2;
             --champagne-gold: #C5A059;
             --text-charcoal: #1A1A1A;
             --vanilla-glow: #F3EEE0;
@@ -31,7 +30,6 @@
             scroll-behavior: smooth;
         }
 
-        /* MAGICAL INTRO PRELOADER */
         #loader {
             position: fixed;
             inset: 0;
@@ -63,11 +61,9 @@
         }
         @keyframes shine { to { background-position: 200% center; } }
 
-        /* Typography Scaling */
         .hero-title { font-size: clamp(3rem, 10vw, 7.5rem); line-height: 1.1; }
         .section-title { font-size: clamp(2.2rem, 6vw, 4.5rem); }
 
-        /* Vanilla Sunray Background */
         .luxury-bg {
             background: radial-gradient(circle at 50% 0%, var(--pearl-cream) 0%, var(--silk-ivory) 60%, var(--vanilla-glow) 100%);
         }
@@ -93,7 +89,6 @@
         }
         .btn-gold:hover { background: transparent; color: var(--champagne-gold); }
 
-        /* Infinite Auto-Scroll Galleries */
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .scroll-container { display: flex; width: max-content; animation: scroll 40s linear infinite; }
         .gallery-item {
@@ -107,7 +102,6 @@
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 1s transform; }
         .gallery-item:hover img { transform: scale(1.1); }
 
-        /* AUTO SLIDING TESTIMONIALS */
         .testimonial-track {
             display: flex;
             width: max-content;
@@ -115,13 +109,10 @@
         }
         .testimonial-track:hover { animation-play-state: paused; }
 
-        /* FAQ Accordion */
         .faq-item { border-bottom: 1px solid rgba(197, 160, 89, 0.15); }
         .faq-question { cursor: pointer; padding: 18px 0; display: flex; justify-content: space-between; align-items: center; font-size: 1.2rem; font-style: italic; font-weight: 500;}
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: #555; font-size: 1rem; }
         .faq-item:focus-within .faq-answer { max-height: 250px; padding-bottom: 20px; }
-
-        /* Social bar in Vanilla */
         .social-bar { background: var(--pearl-cream); border-y: 1px solid var(--vanilla-glow); }
     </style>
 </head>
@@ -165,10 +156,10 @@
         </div>
 
         <div class="relative z-10 text-center" data-aos="fade-up" data-aos-duration="2000">
-            <span class="montserrat text-[10px] md:text-[11px] mb-6 block tracking-[10px] text-stone-400 font-semibold uppercase">The Luxury Vanilla Studio</span>
+            <span class="montserrat text-[10px] md:text-[11px] mb-6 block tracking-[10px] text-stone-400 font-semibold uppercase">The Luxury White Studio </span>
             <h1 class="hero-title italic">Divine <span class="not-italic">Light.</span></h1>
             <p class="max-w-2xl mx-auto text-lg md:text-2xl font-light text-stone-500 mb-10 leading-relaxed italic px-4">
-                Premium Maternity, Newborn & Family Artistry in Hyderabad. <br> Led by Award-Winning Female Photographer <span class="font-normal text-stone-800">Deepti Rawat.</span>
+                Premium Maternity, Newborn & Family Artistry in Hyderabad. <br> Led by Female Photographer <span class="font-normal text-stone-800">Deepti Rawat.</span>
             </p>
             <a href="https://wa.me/919052559111" class="btn-gold shadow-2xl px-12">BOOK YOUR LUXURY SESSION</a>
         </div>
@@ -200,7 +191,7 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT SECTION (FIXED IMAGE PLACEMENT) -->
     <section id="about" class="py-20 md:py-32 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div data-aos="fade-right">
@@ -217,14 +208,16 @@
                     <div><i class="fas fa-heart text-amber-600 mr-2"></i> Certified Safety</div>
                 </div>
             </div>
-            <div class="relative mt-8 md:mt-0" data-aos="zoom-in">
-                <div class="absolute -inset-4 border border-amber-600/20 translate-x-4 translate-y-4"></div>
-                <img src="https://images.unsplash.com/photo-1594161834235-7a62fe45be89?q=80&w=1000" class="relative z-10 shadow-2xl rounded-sm">
+            <div class="relative flex justify-center items-center" data-aos="zoom-in">
+                <div class="relative w-full max-w-lg aspect-[4/5]">
+                    <div class="absolute -inset-4 border border-amber-600/20 translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1594161834235-7a62fe45be89?q=80&w=1000" class="relative z-10 w-full h-full object-cover shadow-2xl rounded-sm">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- MATERNITY SECTION -->
+    <!-- MATERNITY SECTION (GOOGLE DRIVE FIX) -->
     <section id="maternity" class="py-16 md:py-24 border-t border-stone-100">
         <div class="text-center mb-12 md:mb-16 px-6">
             <h2 class="section-title italic mb-4">Luxury <span class="not-italic">Maternity</span></h2>
@@ -233,78 +226,24 @@
         </div>
         <div class="overflow-hidden">
             <div class="scroll-container">
-                <div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1Ympv2XPaxPsfy6YWbWrTD1ZXSPorXVak">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1wD4rLkgsUQTNaNlEh-Z25r43GvrpBahC">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=18hcFJmdV9RX-fakoraRG3xXXpwipWtBr">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=14egYdjTeopmXu69vcQb5DbK-oku1BN_5">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1shU5Zc7F1sOFcdcUHbnShUwPfAGfcvwr">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1IOl46Ivhq4BZFxYIb84jg8CjQxxDhgGs">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=10naOpnrr7DP3NYycrx3muJv_exsKO-v0">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1dIDLTnkJvtXyKYU3x7QADHtHQqtylHM7">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1dQ8Y8nqGogcEFEEN3LkVPlgTi31oLXFJ">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1IrNdQHMMXArz1Qe_pBz980Oh2HcFMm6S">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1HvaudMYGkRt28K2toUulrVsJgk6q-5Rl">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1v3ljI0yqo-XO5drlcvT8cpDiclvkpCI0">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1uSNbRv2buFkcx241crkj-9MGVxrsbMk4">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1RJCAgICmQcUgqzkfdd5TZMirt2nzS2DN">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1AvsvJb5VgBt5OXeA8hrE3r4BN5WXSMM5">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1hiwXev1ISX1rJ4pAyXzAz_eR87yV2FtG">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1V-A6JwPRkSH8dQ81vycgg_CywxWUSJ57">
-</div>
-
-<div class="gallery-item">
-  <img src="https://drive.google.com/uc?export=view&id=1qN9oiGo6amHa0SVX2YedKiKfJYIGgseh">
-</div>
-
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1Ympv2XPaxPsfy6YWbWrTD1ZXSPorXVak" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1wD4rLkgsUQTNaNlEh-Z25r43GvrpBahC" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/18hcFJmdV9RX-fakoraRG3xXXpwipWtBr" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/14egYdjTeopmXu69vcQb5DbK-oku1BN_5" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1shU5Zc7F1sOFcdcUHbnShUwPfAGfcvwr" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1IOl46Ivhq4BZFxYIb84jg8CjQxxDhgGs" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/10naOpnrr7DP3NYycrx3muJv_exsKO-v0" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1dIDLTnkJvtXyKYU3x7QADHtHQqtylHM7" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1dQ8Y8nqGogcEFEEN3LkVPlgTi31oLXFJ" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1IrNdQHMMXArz1Qe_pBz980Oh2HcFMm6S" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1HvaudMYGkRt28K2toUulrVsJgk6q-5Rl" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1v3ljI0yqo-XO5drlcvT8cpDiclvkpCI0" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1uSNbRv2buFkcx241crkj-9MGVxrsbMk4" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1RJCAgICmQcUgqzkfdd5TZMirt2nzS2DN" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1AvsvJb5VgBt5OXeA8hrE3r4BN5WXSMM5" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1hiwXev1ISX1rJ4pAyXzAz_eR87yV2FtG" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1V-A6JwPRkSH8dQ81vycgg_CywxWUSJ57" referrerpolicy="no-referrer"></div>
+                <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1qN9oiGo6amHa0SVX2YedKiKfJYIGgseh" referrerpolicy="no-referrer"></div>
             </div>
         </div>
     </section>
@@ -318,12 +257,70 @@
         </div>
         <div class="overflow-hidden">
             <div class="scroll-container" style="animation-direction: reverse;">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?q=80&w=800"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=800"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546015720-b8b30df5aa27?q=80&w=800"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?q=80&w=800"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=800"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546015720-b8b30df5aa27?q=80&w=800"></div>
+               <div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1nHPyAiSYqRLFGZFaflenEEsaV_VuujL8">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1EfjcsWUTSTsxadOgcftZoFLjUDRlaHLv">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=11-eL7zdT658nhMb4-fhLQuSKjRxQCWB_">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1I2HCTSqqNZi-HMFZnkacN1PXl_C4tXBR">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1f1McFLqQ3GthfIygn9ojsy8c3Y1yBO50">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1NOYGLwTcmtOTX_wQOJdYW5ppioyJUeD7">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1Wx7T9UUhPHgSQwB3vsw9iSsC9zGlgSh1">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=12NcZcKUb5CNFbFnIxnoyHRUpvvrlIP-q">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1DCrsmqqMQGW09sKkXUSLYuOaL39sNuxW">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1MRxSl3pbFrIqdmjzOoFSl4IvMAjWTizz">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1Xozj9rwbcS9_koKFx5-spaSBXgKx2mJs">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=17QAEdftlveoisCAVv4gkz1WYgn2X8VDW">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1g4i7yX4d6MWOVCtA82-vN8JVnq4hI_Pz">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1r4r9-ccIBnHA1wLoSTkcLZAFbsydKPAk">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1ZrRoxU0DqBM7oj05iASYVi7nqLPCYCPc">
+</div>
+
+<div class="gallery-item">
+  <img src="https://drive.google.com/uc?export=view&id=1BNtCs0EyuJWSSX_tGC9xXlhA098k2cLr">
+</div>
+
             </div>
         </div>
     </section>
@@ -363,11 +360,10 @@
         </div>
     </section>
 
-    <!-- AUTO-SLIDING TESTIMONIALS (AUTO FIXED) -->
+    <!-- TESTIMONIALS -->
     <section class="py-20 md:py-32 bg-stone-900 text-white overflow-hidden">
         <h2 class="text-center text-3xl md:text-4xl font-light italic mb-20">Kind Words from Our Community</h2>
         <div class="testimonial-track">
-            <!-- Testimonial Items (Doubled for infinite loop) -->
             <div class="w-[300px] md:w-[450px] px-8 md:px-12 text-center border-r border-white/10">
                 <p class="italic text-base md:text-lg mb-6 opacity-80 whitespace-normal">"Deepti is a magician with white light. My maternity shoot feels like a Vogue cover."</p>
                 <div class="montserrat text-[8px] text-amber-500">Priya & Vikram S. • Hyderabad</div>
@@ -383,15 +379,6 @@
             <div class="w-[300px] md:w-[450px] px-8 md:px-12 text-center border-r border-white/10">
                 <p class="italic text-base md:text-lg mb-6 opacity-80 whitespace-normal">"The white studio aesthetic is dreamlike. Highly recommended for families."</p>
                 <div class="montserrat text-[8px] text-amber-500">Meher V. • Kurnool</div>
-            </div>
-            <!-- Duplicate for loop -->
-            <div class="w-[300px] md:w-[450px] px-8 md:px-12 text-center border-r border-white/10">
-                <p class="italic text-base md:text-lg mb-6 opacity-80 whitespace-normal">"Deepti is a magician with white light. My maternity shoot feels like a Vogue cover."</p>
-                <div class="montserrat text-[8px] text-amber-500">Priya & Vikram S. • Hyderabad</div>
-            </div>
-            <div class="w-[300px] md:w-[450px] px-8 md:px-12 text-center border-r border-white/10">
-                <p class="italic text-base md:text-lg mb-6 opacity-80 whitespace-normal">"Most patient newborn photographer. We travelled from Bidar just for her aesthetic."</p>
-                <div class="montserrat text-[8px] text-amber-500">Sneha R. • Bidar, KA</div>
             </div>
         </div>
     </section>
@@ -410,24 +397,8 @@
                     <div class="faq-answer">Yes, we provide access to our curated luxury collection of premium designer maternity gowns and baby-safe silk wraps.</div>
                 </div>
                 <div class="faq-item" tabindex="0">
-                    <div class="faq-question">Is the studio safe for newborns? <span><i class="fas fa-plus text-xs"></i></span></div>
-                    <div class="faq-answer">Safety is our absolute priority. We maintain a medical-grade hygienic, temperature-controlled environment.</div>
-                </div>
-                <div class="faq-item" tabindex="0">
                     <div class="faq-question">Who leads the creative session? <span><i class="fas fa-plus text-xs"></i></span></div>
                     <div class="faq-answer">Every session is directed by Deepti Rawat personally, ensuring our signature luxury white light aesthetic in every frame.</div>
-                </div>
-                <div class="faq-item" tabindex="0">
-                    <div class="faq-question">Do you cover events outside Hyderabad? <span><i class="fas fa-plus text-xs"></i></span></div>
-                    <div class="faq-answer">Yes, we travel for premium event bookings and home sessions across Telangana, Andhra Pradesh, and Karnataka.</div>
-                </div>
-                <div class="faq-item" tabindex="0">
-                    <div class="faq-question">Can family members join the shoot? <span><i class="fas fa-plus text-xs"></i></span></div>
-                    <div class="faq-answer">Absolutely. We encourage husbands and children to be part of the maternity and newborn sessions to capture your family story.</div>
-                </div>
-                <div class="faq-item" tabindex="0">
-                    <div class="faq-question">What is the studio aesthetic? <span><i class="fas fa-plus text-xs"></i></span></div>
-                    <div class="faq-answer">Our studio is a sun-drenched sanctuary of ivory tones and natural window light, specifically designed for high-end results.</div>
                 </div>
             </div>
         </div>
@@ -445,7 +416,6 @@
                     <option>MATERNITY ARTISTRY</option>
                     <option>NEWBORN ARTISTRY</option>
                     <option>FAMILY PORTRAIT</option>
-                    <option>EVENT COVERAGE</option>
                 </select>
                 <div class="md:col-span-2 mt-4">
                     <button class="btn-gold w-full py-5 shadow-xl font-bold">REQUEST PRICING & AVAILABILITY</button>
@@ -454,16 +424,16 @@
         </div>
     </section>
 
-    <!-- BIG FOOTER -->
+    <!-- FOOTER -->
     <footer class="py-16 md:py-24 bg-[#F9F5EB] border-t border-[#E9E4D9]">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
             <div>
                 <h3 class="text-2xl md:text-3xl tracking-[8px] uppercase font-light mb-6">PhotoArt</h3>
-                <p class="text-stone-400 text-sm italic mb-8 leading-relaxed">Where Motherhood Becomes Art. Founded and led by Deepti Rawat. Luxury photography serving Hyderabad, South India, and beyond.</p>
+                <p class="text-stone-400 text-sm italic mb-8">Where Motherhood Becomes Art. Founded and led by Deepti Rawat.</p>
                 <div class="flex gap-6 text-2xl text-amber-600">
-                    <a href="https://www.instagram.com/photoartbydeepti/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/PhotographybyDeepti/"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/919052559111"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             
@@ -471,20 +441,11 @@
                 <h4 class="font-bold text-stone-900 mb-2">OUR LOCATIONS</h4>
                 <p class="text-amber-600 font-bold uppercase">Primary: Hyderabad, TS</p>
                 <p>KURNOOL • VIJAYAWADA • VIZAG</p>
-                <p>BIDAR • BORDER KARNATAKA</p>
-                <p>SERVICING ALL SOUTH INDIA</p>
             </div>
 
             <div class="montserrat text-[9px] space-y-4">
                 <h4 class="font-bold text-stone-900 mb-2">SOCIAL PROOF</h4>
-                <div class="flex items-center gap-3">
-                    <i class="fab fa-instagram text-lg text-amber-600"></i>
-                    <div><p class="font-bold">12.6K+ FOLLOWERS</p></div>
-                </div>
-                <div class="flex items-center gap-3 mt-4">
-                    <i class="fab fa-facebook text-lg text-amber-600"></i>
-                    <div><p class="font-bold">3.8K+ COMMUNITY</p></div>
-                </div>
+                <p class="font-bold">12.6K+ FOLLOWERS</p>
             </div>
 
             <div class="montserrat text-[9px] space-y-4">
@@ -493,14 +454,10 @@
                     <i class="fas fa-phone-alt text-amber-600"></i>
                     <a href="tel:9052559111" class="text-base md:text-lg italic underline text-stone-900">90525 59111</a>
                 </div>
-                <div class="flex items-center gap-3">
-                    <i class="fas fa-envelope text-amber-600"></i>
-                    <p>DEEPTISUCCESS@GMAIL.COM</p>
-                </div>
             </div>
         </div>
         <div class="mt-16 text-center opacity-30 montserrat text-[7px] tracking-[5px] text-stone-600 px-6">
-            © 2024 PHOTOART BY DEEPTI RAWAT | LUXURY VANILLA STUDIO HYDERABAD.
+            © 2024 PHOTOART BY DEEPTI RAWAT | LUXURY WHITE STUDIO HYDERABAD.
         </div>
     </footer>
 
@@ -508,16 +465,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1500, once: true });
-        
-        // MAGICAL INTRO
         window.addEventListener('load', () => {
             const loader = document.getElementById('loader');
             const loaderSub = document.getElementById('loader-sub');
-
-            setTimeout(() => {
-                loaderSub.style.opacity = '1';
-            }, 800);
-
+            setTimeout(() => { loaderSub.style.opacity = '1'; }, 800);
             setTimeout(() => {
                 loader.style.opacity = '0';
                 setTimeout(() => loader.style.display = 'none', 1000);
