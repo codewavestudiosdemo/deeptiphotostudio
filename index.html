@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoArt By Deepti | Luxury Maternity, Newborn & Events Hyderabad</title>
+    
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styling & Animations -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --silk-ivory: #FAF9F6;
+            --pearl-cream: #FDFBF7;
+            --champagne-gold: #C5A059;
+            --text-charcoal: #1A1A1A;
+        }
+
+        body {
+            background-color: var(--silk-ivory);
+            color: var(--text-charcoal);
+            font-family: 'Cormorant Garamond', serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Cinematic Intro Preloader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: var(--pearl-cream);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Luxury Whitish Background with Sunray Glow */
+        .luxury-bg {
+            background: radial-gradient(circle at 50% 0%, #ffffff 0%, var(--silk-ivory) 60%, var(--pearl-cream) 100%);
+        }
+
+        .montserrat { font-family: 'Montserrat', sans-serif; letter-spacing: 3px; text-transform: uppercase; }
+
+        /* Navigation Luxury */
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .btn-gold {
+            background: var(--champagne-gold);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            padding: 14px 28px;
+            border: 1px solid var(--champagne-gold);
+            transition: all 0.4s ease;
+            display: inline-block;
+            letter-spacing: 2px;
+        }
+        .btn-gold:hover {
+            background: transparent;
+            color: var(--champagne-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Infinite Auto-Scroll Gallery */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .scroll-container {
+            display: flex;
+            width: 200%;
+            animation: scroll 40s linear infinite;
+        }
+        .scroll-container:hover { animation-play-state: paused; }
+        .gallery-item {
+            width: 320px;
+            height: 450px;
+            flex-shrink: 0;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 1s transform;
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        /* FAQ Accordion - Click to Reveal */
+        .faq-item { border-bottom: 1px solid #e5e5e5; }
+        .faq-question { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-size: 1.25rem; font-style: italic; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; color: #666; font-size: 1rem; padding-bottom: 0; }
+        .faq-item:focus-within .faq-answer { max-height: 200px; padding-bottom: 20px; }
+
+        /* Testimonial Auto Scroll */
+        .testimonial-track {
+            display: flex;
+            width: 250%;
+            animation: scroll 60s linear infinite;
+        }
+    </style>
+</head>
+<body class="luxury-bg">
+
+    <!-- INTRO PRELOADER -->
+    <div id="loader">
+        <h2 class="text-4xl tracking-[15px] uppercase font-light mb-2">PhotoArt</h2>
+        <p class="montserrat text-[10px] text-amber-600">By Deepti Rawat</p>
+        <div class="w-32 h-[1px] bg-stone-200 mt-8 animate-pulse"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="fixed w-full z-[100] px-6 md:px-16 py-4 flex justify-between items-center">
+        <div class="flex flex-col">
+            <span class="text-2xl md:text-3xl tracking-[8px] uppercase font-light">PhotoArt</span>
+            <span class="montserrat text-[8px] text-stone-400">By Deepti Rawat</span>
+        </div>
+        
+        <div class="hidden lg:flex space-x-8 montserrat text-[9px] font-medium">
+            <a href="#maternity" class="hover:text-amber-600 transition">Maternity</a>
+            <a href="#newborn" class="hover:text-amber-600 transition">Newborn</a>
+            <a href="#family" class="hover:text-amber-600 transition">Family</a>
+            <a href="#events" class="hover:text-amber-600 transition">Events & Home</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <a href="tel:9052559111" class="hidden md:flex items-center gap-2 montserrat text-[10px] border border-stone-200 px-4 py-3 hover:bg-white transition">
+                <i class="fas fa-phone-alt text-amber-600"></i> CALL NOW
+            </a>
+            <a href="https://wa.me/919052559111" class="btn-gold">RESERVE DATE</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000" class="w-full h-full object-cover">
+        </div>
+
+        <div class="relative z-10 text-center px-4" data-aos="fade-up" data-aos-duration="2000">
+            <span class="montserrat text-[11px] mb-6 block tracking-[12px] text-stone-400 font-medium">Premium Studio Experience</span>
+            <h1 class="text-6xl md:text-[110px] font-light leading-none mb-6 italic">Divine <span class="not-italic">Light.</span></h1>
+            <p class="max-w-2xl mx-auto text-xl md:text-2xl font-light text-stone-500 mb-10 leading-relaxed">
+                Luxury Maternity, Newborn & Editorial Photography in Hyderabad. Led by Female Photographer <span class="italic font-normal">Deepti Rawat.</span>
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#inquiry" class="btn-gold shadow-2xl px-12">BOOK YOUR LUXURY SESSION</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / TEAM HIGHLIGHT -->
+    <section class="py-32 px-6 bg-white/30">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <span class="montserrat text-xs text-amber-600 mb-4 block italic">The Artist Behind the Lens</span>
+                <h2 class="text-5xl md:text-7xl mb-8 font-light italic text-stone-800">Meet Deepti</h2>
+                <p class="text-2xl font-light leading-relaxed text-stone-500 mb-8 italic">
+                    "I believe every woman is a masterpiece. My studio is a sanctuary where natural sunlight and luxury aesthetics meet to capture your most divine transition."
+                </p>
+                <p class="text-stone-500 mb-8">Founded and led by Deepti Rawat, our studio features a professional team of cinematographers and baby handlers dedicated to delivering premium, timeless results.</p>
+                <div class="grid grid-cols-2 gap-6 montserrat text-[10px] text-stone-400">
+                    <div><i class="fas fa-sun text-amber-600 mr-2"></i>  Light Aesthetic</div>
+                    <div><i class="fas fa-gem text-amber-600 mr-2"></i> Premium  Gowns</div>
+                    <div><i class="fas fa-users text-amber-600 mr-2"></i> Professional Team</div>
+                    <div><i class="fas fa-heart text-amber-600 mr-2"></i> Safe Baby Handling</div>
+                </div>
+            </div>
+            <div class="relative" data-aos="zoom-in">
+                <div class="absolute -inset-4 border border-amber-600/20 translate-x-4 translate-y-4"></div>
+                <img src="https://images.unsplash.com/photo-1594161834235-7a62fe45be89?q=80&w=1000" class="relative z-10 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- MATERNITY SECTION -->
+    <section id="maternity" class="py-24 border-t border-stone-100">
+        <div class="text-center mb-16 px-6">
+            <h2 class="text-5xl md:text-6xl font-light italic mb-4">Luxury <span class="not-italic">Maternity</span></h2>
+            <p class="max-w-2xl mx-auto text-stone-500 mb-10">Signature editorial sessions with exclusive access to our premium gown collection.</p>
+            <a href="https://wa.me/919052559111" class="btn-gold mb-16">BOOK MATERNITY SESSION</a>
+        </div>
+        <div class="overflow-hidden">
+            <div class="scroll-container">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559599141-3816a0b1f1e1?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1590424753042-7013df3132cc?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1484860137475-592fc0e7142a?q=80&w=800"></div>
+                <!-- Duplicate for scroll -->
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559599141-3816a0b1f1e1?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1590424753042-7013df3132cc?q=80&w=800"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWBORN SECTION -->
+    <section id="newborn" class="py-24 bg-[#FDFBF7]">
+        <div class="text-center mb-16 px-6">
+            <h2 class="text-5xl md:text-6xl font-light italic mb-4">Newborn <span class="not-italic">Artistry</span></h2>
+            <p class="max-w-2xl mx-auto text-stone-500 mb-10">Safe baby posing, fine-art wraps, and luxury props in a temperature-controlled sanctuary.</p>
+            <a href="https://wa.me/919052559111" class="btn-gold mb-16">BOOK NEWBORN ARTISTRY</a>
+        </div>
+        <div class="overflow-hidden">
+            <div class="scroll-container" style="animation-direction: reverse;">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546015720-b8b30df5aa27?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?q=80&w=800"></div>
+                <!-- Duplicate -->
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=800"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAMILY & MILESTONE -->
+    <section id="family" class="py-24">
+        <div class="text-center mb-16 px-6">
+            <h2 class="text-5xl md:text-6xl font-light italic mb-4">Family & <span class="not-italic">Milestones</span></h2>
+            <p class="max-w-2xl mx-auto text-stone-500 mb-10">Capturing generational bonds and first-year milestones with curated outfits and props.</p>
+            <a href="https://wa.me/919052559111" class="btn-gold mb-16">BOOK FAMILY PORTRAITS</a>
+        </div>
+        <div class="overflow-hidden">
+            <div class="scroll-container">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559599141-3816a0b1f1e1?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1590424753042-7013df3132cc?q=80&w=800"></div>
+                <!-- Duplicate -->
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?q=80&w=800"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS & HOME SHOOTS -->
+    <section id="events" class="py-32 bg-stone-50 border-y border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <div data-aos="fade-up">
+                <h3 class="text-4xl italic mb-6">Premium Event Coverage</h3>
+                <p class="text-stone-500 mb-8">From luxurious baby showers to intimate birthday gatherings, we cover your special days with an editorial eye. Limited slots available on demand.</p>
+                <a href="https://wa.me/919052559111" class="btn-gold">INQUIRE FOR EVENTS</a>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-4xl italic mb-6">Luxury Home & Outdoor</h3>
+                <p class="text-stone-500 mb-8">Prefer the comfort of your home or a scenic sunset? We provide on-location luxury shoots across Hyderabad for our premium clients.</p>
+                <a href="https://wa.me/919052559111" class="btn-gold">BOOK ON-LOCATION SHOOT</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTO-SCROLL TESTIMONIALS (SEO) -->
+    <section class="py-32 bg-stone-900 text-white overflow-hidden">
+        <h2 class="text-center text-4xl font-light italic mb-20">Kind Words from Parents</h2>
+        <div class="testimonial-track">
+            <!-- 12 Items -->
+            <div class="w-[450px] px-12 text-center border-r border-white/10">
+                <p class="italic text-lg mb-6 opacity-80">"The gowns were royal and the studio lighting is magical. Deepti is the best!"</p>
+                <div class="montserrat text-[9px] text-amber-500">Priya & Vikram S. • Hyderabad</div>
+            </div>
+            <div class="w-[450px] px-12 text-center border-r border-white/10">
+                <p class="italic text-lg mb-6 opacity-80">"Most patient newborn photographer. We travelled from Bidar just for her aesthetic."</p>
+                <div class="montserrat text-[9px] text-amber-500">Sneha R. • Bidar</div>
+            </div>
+            <div class="w-[450px] px-12 text-center border-r border-white/10">
+                <p class="italic text-lg mb-6 opacity-80">"A luxury experience from start to finish. Her team is amazing."</p>
+                <div class="montserrat text-[9px] text-amber-500">Anusha K. • Vijayawada</div>
+            </div>
+            <div class="w-[450px] px-12 text-center border-r border-white/10">
+                <p class="italic text-lg mb-6 opacity-80">"Captured our baby shower events so beautifully. High-end results."</p>
+                <div class="montserrat text-[9px] text-amber-500">Kavya P. • Kurnool</div>
+            </div>
+            <div class="w-[450px] px-12 text-center border-r border-white/10">
+                <p class="italic text-lg mb-6 opacity-80">"The white studio aesthetic is dreamlike. Highly recommended for families."</p>
+                <div class="montserrat text-[9px] text-amber-500">Rahul M. • Vizag</div>
+            </div>
+            <div class="w-[450px] px-12 text-center border-r border-white/10">
+                <p class="italic text-lg mb-6 opacity-80">"Best maternity studio in South India. Worth every penny."</p>
+                <div class="montserrat text-[9px] text-amber-500">Meher V. • Border Karnataka</div>
+            </div>
+            <!-- Duplicate for loop -->
+            <div class="w-[450px] px-12 text-center border-r border-white/10">
+                <p class="italic text-lg mb-6 opacity-80">"Deepti's vision is unique. Timeless light and beautiful posing."</p>
+                <div class="montserrat text-[9px] text-amber-500">Sunita G. • Hyderabad</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (CLICK TO REVEAL) -->
+    <section class="py-32 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-light italic mb-16 text-center">Studio <span class="not-italic">Details</span></h2>
+            <div class="space-y-4">
+                <div class="faq-item" tabindex="0">
+                    <div class="faq-question">When should I book my session? <span><i class="fas fa-plus text-xs"></i></span></div>
+                    <div class="faq-answer">Maternity is best at 28-34 weeks. For Newborns, we recommend booking during your second trimester to ensure availability.</div>
+                </div>
+                <div class="faq-item" tabindex="0">
+                    <div class="faq-question">Do you provide all outfits and props? <span><i class="fas fa-plus text-xs"></i></span></div>
+                    <div class="faq-answer">Yes, we have a curated luxury collection of maternity gowns, baby wraps, outfits, and props. You just need to arrive and relax.</div>
+                </div>
+                <div class="faq-item" tabindex="0">
+                    <div class="faq-question">Is your studio safe for newborns? <span><i class="fas fa-plus text-xs"></i></span></div>
+                    <div class="faq-answer">Absolutely. We maintain a medical-grade hygienic, temperature-controlled environment and Deepti is a certified safe-posing specialist.</div>
+                </div>
+                <div class="faq-item" tabindex="0">
+                    <div class="faq-question">Do you cover events outside Hyderabad? <span><i class="fas fa-plus text-xs"></i></span></div>
+                    <div class="faq-answer">Yes, we travel for premium event bookings and home sessions across Telangana, Andhra Pradesh, and Karnataka.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INQUIRY FORM -->
+    <section id="inquiry" class="py-32 px-6 bg-[#F9F7F4]">
+        <div class="max-w-4xl mx-auto bg-white p-12 shadow-sm border border-stone-100">
+            <h2 class="text-4xl italic mb-10 text-center">Inquire for <span class="not-italic">Your Session</span></h2>
+            <form class="grid md:grid-cols-2 gap-8">
+                <input type="text" placeholder="FULL NAME" class="border-b border-stone-200 py-4 focus:outline-none focus:border-amber-600 montserrat text-[10px]">
+                <input type="tel" placeholder="PHONE NUMBER" class="border-b border-stone-200 py-4 focus:outline-none focus:border-amber-600 montserrat text-[10px]">
+                <select class="md:col-span-2 border-b border-stone-200 py-4 focus:outline-none bg-transparent montserrat text-[10px]">
+                    <option>SELECT EXPERIENCE</option>
+                    <option>MATERNITY SHOOT</option>
+                    <option>NEWBORN ARTISTRY</option>
+                    <option>FAMILY PORTRAIT</option>
+                    <option>EVENT COVERAGE</option>
+                </select>
+                <div class="md:col-span-2">
+                    <button class="btn-gold w-full py-6 text-xs shadow-xl">REQUEST PRICING & AVAILABILITY</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- BIG FOOTER -->
+    <footer class="py-24 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-3xl tracking-[8px] uppercase font-light mb-6">PhotoArt</h3>
+                <p class="text-stone-400 text-sm leading-relaxed mb-8">Where Motherhood Becomes Art. Founded and led by Deepti Rawat. Luxury photography serving South India's elite families.</p>
+                <div class="flex gap-6 text-2xl text-amber-600">
+                    <a href="https://www.instagram.com/photoartbydeepti/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/PhotographybyDeepti/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/919052559111"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="montserrat text-[9px] space-y-4">
+                <h4 class="font-bold text-stone-900 mb-6">OUR LOCATIONS</h4>
+                <p class="text-amber-600 font-bold">PRIMARY: HYDERABAD, TS</p>
+                <p>KURNOOL, AP</p>
+                <p>VIJAYAWADA & VIZAG</p>
+                <p>BIDAR & BORDER KARNATAKA</p>
+                <p>ACROSS SOUTH INDIA</p>
+            </div>
+
+            <div class="montserrat text-[9px] space-y-4">
+                <h4 class="font-bold text-stone-900 mb-6">SOCIAL PROOF</h4>
+                <div class="flex items-center gap-3">
+                    <i class="fab fa-instagram text-xl text-amber-600"></i>
+                    <div>
+                        <p class="font-bold">12.6K+ FOLLOWERS</p>
+                        <p class="text-stone-400">@photoartbydeepti</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 mt-4">
+                    <i class="fab fa-facebook text-xl text-amber-600"></i>
+                    <div>
+                        <p class="font-bold">3.8K+ COMMUNITY</p>
+                        <p class="text-stone-400">PhotographyByDeepti</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="montserrat text-[9px] space-y-4">
+                <h4 class="font-bold text-stone-900 mb-6">CONTACT & BOOKINGS</h4>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-phone-alt text-amber-600"></i>
+                    <a href="tel:9052559111" class="text-lg italic tracking-normal underline text-stone-900">90525 59111</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-envelope text-amber-600"></i>
+                    <p>DEEPTISUCCESS@GMAIL.COM</p>
+                </div>
+                <div class="pt-4">
+                    <p class="text-stone-400">MON-SAT: 10AM - 7PM</p>
+                    <p class="text-stone-400">STUDIO BY APPOINTMENT ONLY</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 text-center opacity-30 montserrat text-[8px] tracking-[6px] text-stone-600">
+            © 2024 PHOTOART BY DEEPTI RAWAT | LUXURY WHITE LIGHT STUDIO HYDERABAD.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1500, once: true });
+        
+        // Hide Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 1000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
